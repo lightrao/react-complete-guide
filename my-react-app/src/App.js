@@ -1,4 +1,6 @@
 import React from "react";
+
+import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
 
 const App = () => {
@@ -35,7 +37,7 @@ const App = () => {
     // Under hood JSX will be transformed to javascript code which browser can run
     // declarative way different from imperative way(just javascript)
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   );
