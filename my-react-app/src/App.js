@@ -26,6 +26,11 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log("In App.js:");
+    console.log(expense);
+  };
+
   // return React.createElement(
   //   "div",
   //   {},
@@ -37,7 +42,7 @@ const App = () => {
     // Under hood JSX will be transformed to javascript code which browser can run
     // declarative way different from imperative way(just javascript)
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
