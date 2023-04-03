@@ -3,6 +3,7 @@ import React from "react";
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
 
+// The component which should be lifted the state up to
 const App = () => {
   const expenses = [
     {
