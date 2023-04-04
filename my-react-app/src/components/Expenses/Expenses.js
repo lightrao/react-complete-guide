@@ -9,9 +9,6 @@ const Expenses = ({ items }) => {
   const [filteredYear, setFilteredYear] = useState("2020");
 
   const filterChangeHandler = (selectedYear) => {
-    // console.log("Expenses.js:");
-    // console.log(selectedYear);
-
     setFilteredYear(selectedYear);
   };
 
@@ -22,14 +19,17 @@ const Expenses = ({ items }) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {items.map((item) => (
-          <ExpenseItem
-            key={item.id}
-            title={item.title}
-            amount={item.amount}
-            date={item.date}
-          />
-        ))}
+        {
+          // rendring list of data
+          items.map((item) => (
+            <ExpenseItem
+              key={item.id}
+              title={item.title}
+              amount={item.amount}
+              date={item.date}
+            />
+          ))
+        }
       </Card>
     </div>
   );
