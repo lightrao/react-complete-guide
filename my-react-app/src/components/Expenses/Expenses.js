@@ -4,6 +4,7 @@ import ExpensesFilter from "./ExpensesFilter";
 import "./Expenses.css";
 import { useState } from "react";
 
+// manage state
 const Expenses = ({ items }) => {
   const [filteredYear, setFilteredYear] = useState("2020");
 

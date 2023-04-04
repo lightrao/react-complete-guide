@@ -2,6 +2,7 @@ import React from "react";
 
 import "./ExpensesFilter.css";
 
+// a controlled component
 const ExpensesFilter = (props) => {
   const dropdownChangeHandler = (event) => {
     // console.log("ExpensesFilter.js:");
