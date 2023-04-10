@@ -12,6 +12,11 @@ const Expenses = ({ items }) => {
     setFilteredYear(selectedYear);
   };
 
+  const filteredExpenses = items.filter(
+    (expense) => expense.date.getFullYear().toString() === filteredYear
+  );
+  // console.log(filteredExpenses);
+
   return (
     <div>
       <Card className="expenses">
@@ -21,7 +26,7 @@ const Expenses = ({ items }) => {
         />
         {
           // rendring list of data
-          items.map((expense) => (
+          filteredExpenses.map((expense) => (
             <ExpenseItem
               key={
                 expense.id
