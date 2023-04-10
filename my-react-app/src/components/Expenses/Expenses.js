@@ -21,12 +21,14 @@ const Expenses = ({ items }) => {
         />
         {
           // rendring list of data
-          items.map((item) => (
+          items.map((expense) => (
             <ExpenseItem
-              key={item.id}
-              title={item.title}
-              amount={item.amount}
-              date={item.date}
+              key={
+                expense.id
+              } /* help React identify the individual items, unique IDs */
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
             />
           ))
         }
