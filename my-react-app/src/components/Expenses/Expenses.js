@@ -15,7 +15,18 @@ const Expenses = ({ items }) => {
   const filteredExpenses = items.filter(
     (expense) => expense.date.getFullYear().toString() === filteredYear
   );
-  // console.log(filteredExpenses);
+
+  let expensesContent = <p>No expense found.</p>;
+  if (filteredExpenses.length > 0) {
+    expensesContent = filteredExpenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ));
+  }
 
   return (
     <div>
@@ -24,19 +35,30 @@ const Expenses = ({ items }) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {
-          // rendring list of data
+        {expensesContent}
+        {/* {filteredExpenses.length === 0 && <p>No expense found.</p>}
+        {filteredExpenses.length > 0 &&
           filteredExpenses.map((expense) => (
             <ExpenseItem
-              key={
-                expense.id
-              } /* help React identify the individual items, unique IDs */
+              key={expense.id}
+              title={expense.title}
+              amount={expense.amount}
+              date={expense.date}
+            />
+          ))} */}
+
+        {/* {filteredExpenses.length === 0 ? (
+          <p>No expense found.</p>
+        ) : (
+          filteredExpenses.map((expense) => (
+            <ExpenseItem
+              key={expense.id}
               title={expense.title}
               amount={expense.amount}
               date={expense.date}
             />
           ))
-        }
+        )} */}
       </Card>
     </div>
   );
