@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import './CourseGoalItem.css';
+import "./CourseGoalItem.css";
 
 const CourseGoalItem = (props) => {
   const deleteHandler = () => {
-    props.onDelete(props.id);
+    props.onDelete(props.id); // set break point in chrome
   };
 
   return (
