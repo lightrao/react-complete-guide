@@ -14,6 +14,7 @@ const App = () => {
     setCourseGoals((prevGoals) => {
       const updatedGoals = [...prevGoals];
       updatedGoals.unshift({ text: enteredText, id: "goal1" }); //set ID to a hard-coded string, assigned the same ID to all goals
+      console.log(updatedGoals);
       return updatedGoals;
     });
   };
@@ -21,6 +22,7 @@ const App = () => {
   const deleteItemHandler = (goalId) => {
     setCourseGoals((prevGoals) => {
       const updatedGoals = prevGoals.filter((goal) => goal.id !== goalId);
+      console.log(updatedGoals);
       return updatedGoals;
     });
   };
