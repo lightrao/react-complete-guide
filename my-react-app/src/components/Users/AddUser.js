@@ -54,9 +54,11 @@ const AddUser = (props) => {
       <Card key="add-user-card" className={classes.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username</label>
-          <input id="username" type="text" ref={nameInputRef} />
-          <label htmlFor="age">Age (Years)</label>
-          <input id="age" type="number" ref={ageInputRef} />
+          {/*  uncontrolled components */}
+          <input id="username" type="text" ref={nameInputRef} />{" "}
+          <label htmlFor="age">Age (Years)</label>{" "}
+          {/* uncontrolled components */}
+          <input id="age" type="number" ref={ageInputRef} />{" "}
           <Button type="submit">Add User</Button>
         </form>
       </Card>
