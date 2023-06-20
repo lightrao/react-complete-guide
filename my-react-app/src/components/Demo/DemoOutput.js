@@ -8,4 +8,7 @@ const DemoOutput = (props) => {
   return <MyParagraph>{props.show ? "This is new!" : ""}</MyParagraph>;
 };
 
-export default DemoOutput;
+export default React.memo(DemoOutput);
+
+// props.show===props.previous.show
+// primitive type

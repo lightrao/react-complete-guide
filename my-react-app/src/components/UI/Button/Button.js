@@ -17,4 +17,7 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+export default React.memo(Button);
+
+// props.onClick === props.previous.onClick
+// reference type
