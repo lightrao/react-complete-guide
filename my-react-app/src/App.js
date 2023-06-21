@@ -5,7 +5,7 @@ import DemoOutput from "./components/Demo/DemoOutput";
 import "./App.css";
 
 function App() {
-  const [showParagraph, setShowParagraph] = useState(false);
+  const [showParagraph, setShowParagraph] = useState(false); // state will be initialize only once!
   const [allowToggle, setAllowToggle] = useState(false);
 
   console.log("App() running...");
