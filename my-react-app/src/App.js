@@ -18,14 +18,16 @@ function App() {
   }, [allowToggle]);
 
   const allowToggleHandler = () => {
-    setAllowToggle(true);
+    setAllowToggle((prev) => !prev);
   };
 
   return (
     <div className="app">
       <h1>Hi there!</h1>
       <DemoOutput show={showParagraph /* false */} />
-      <Button onClick={allowToggleHandler}>Allow Toggling :D</Button>
+      <Button onClick={allowToggleHandler}>
+        {allowToggle ? "Allow Toggling :D" : "Toggling not allowed D:"}
+      </Button>
       <Button onClick={toggleParagraphHandler}>Toggle Paragraph!</Button>
     </div>
   );
