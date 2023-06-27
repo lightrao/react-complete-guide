@@ -5,10 +5,9 @@ import DemoOutput from "./components/Demo/DemoOutput";
 import "./App.css";
 
 function App() {
+  console.log("App() running...");
   const [showParagraph, setShowParagraph] = useState(false); // state will be initialize only once!
   const [allowToggle, setAllowToggle] = useState(false);
-
-  console.log("App() running...");
 
   const toggleParagraphHandler = useCallback(() => {
     // console.log("allowToggle:", allowToggle);
@@ -17,18 +16,20 @@ function App() {
     }
   }, [allowToggle]);
 
-  const allowToggleHandler = () => {
+  const allowToggleHandler = useCallback(() => {
     setAllowToggle((prev) => !prev);
-  };
+  }, []);
 
   return (
     <div className="app">
       <h1>Hi there!</h1>
       <DemoOutput show={showParagraph /* false */} />
-      <Button onClick={allowToggleHandler}>
-        {allowToggle ? "Allow Toggling :D" : "Toggling not allowed D:"}
+      <Button onClick={allowToggleHandler} btnName="Allow Toggle Btn">
+        Switch Allow Toggle :)
       </Button>
-      <Button onClick={toggleParagraphHandler}>Toggle Paragraph!</Button>
+      <Button onClick={toggleParagraphHandler} btnName="Toggle Paragraph Btn">
+        Toggle Paragraph!
+      </Button>
     </div>
   );
 }
