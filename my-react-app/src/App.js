@@ -12,12 +12,12 @@ function App() {
   const toggleParagraphHandler = useCallback(() => {
     // console.log("allowToggle:", allowToggle);
     if (allowToggle) {
-      setShowParagraph((prevShowParagraph) => !prevShowParagraph);
+      setShowParagraph((prevShowParagraph) => !prevShowParagraph); // schedules a state update
     }
   }, [allowToggle]);
 
   const allowToggleHandler = useCallback(() => {
-    setAllowToggle((prev) => !prev);
+    setAllowToggle((prev) => !prev); // schedules a state update, batch more than one state updates together
   }, []);
 
   return (
