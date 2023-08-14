@@ -7,6 +7,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [tasks, setTasks] = useState([]);
+  console.log(tasks);
 
   const fetchTasks = async (taskText) => {
     setIsLoading(true);
@@ -21,13 +22,12 @@ function App() {
       }
 
       const data = await response.json();
+      console.log(data);
 
       const loadedTasks = [];
-
       for (const taskKey in data) {
         loadedTasks.push({ id: taskKey, text: data[taskKey].text });
       }
-
       setTasks(loadedTasks);
     } catch (err) {
       setError(err.message || "Something went wrong!");
