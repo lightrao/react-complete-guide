@@ -2,6 +2,8 @@ const redux = require("redux");
 
 // reducer will be executed by redux library
 const counterReducer = (state = { counter: 0 }, action) => {
+  console.log("reducer receive action:", action);
+
   return {
     counter: state.counter + 1,
   };
