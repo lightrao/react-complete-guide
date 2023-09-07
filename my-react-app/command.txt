@@ -1,4 +1,4 @@
-npm init -y
-npm install redux
+npm install
+npm install redux react-redux
 
-node redux-demo.js
+npm start
