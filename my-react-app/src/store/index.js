@@ -27,4 +27,7 @@ const myReduxStore = configureStore({
   reducer: counterSlice.reducer,
 });
 
+// action creators
+export const counterActions = counterSlice.actions;
+
 export default myReduxStore;
