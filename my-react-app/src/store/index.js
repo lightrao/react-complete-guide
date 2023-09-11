@@ -7,13 +7,13 @@ createSlice({
   name: "counter",
   initialState: initialState,
   reducers: {
-    increment(state) {
+    increment: function (state) {
       state.counter++;
     },
-    decrement(state) {
-      state.decrement--;
+    decrement: function (state) {
+      state.counter--;
     },
-    increase(state, action) {
+    increase: (state, action) => {
       state.counter = state.counter + action.payload;
     },
     toggleCounter(state) {
