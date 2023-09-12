@@ -9,8 +9,8 @@ const Counter = () => {
 
   // param function will be executed by redux to get part of state
   // redux will automatically manage a subscription to the redux store for the current component("Counter")
-  const counter = useSelector((state) => state.counter);
-  const show = useSelector((state) => state.showCounter);
+  const counter = useSelector((state) => state.counterSliceReducer.counter);
+  const show = useSelector((state) => state.counterSliceReducer.showCounter);
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
