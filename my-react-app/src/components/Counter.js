@@ -1,7 +1,7 @@
 // "useSelector" allows us to select a part of state managed by the store
 import { useSelector, useDispatch } from "react-redux";
 
-import { counterActions } from "../store/index";
+import { counterActions } from "../store/counter-slice";
 import classes from "./Counter.module.css";
 
 const Counter = () => {
