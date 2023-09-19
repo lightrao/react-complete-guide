@@ -12,6 +12,8 @@ function App() {
   // the "App" component function will be re-executed and we will get to the latest state of "cart"
   const cart = useSelector((state) => state.cartSliceReducer);
 
+  // execute when our app starts, It's a problem because this will send the initial (i.e. empty)
+  // cart to our backend and overwrite any data stored there.
   useEffect(() => {
     fetch(
       "https://react-http-post-example-default-rtdb.asia-southeast1.firebasedatabase.app/cart.json",
