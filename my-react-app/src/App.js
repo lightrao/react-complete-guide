@@ -32,10 +32,12 @@ function App() {
       return;
     }
 
-    // "dispatch" function accept action creators that return functions, redux execute the returned function for you
-    // and will give "dispatch" function object as argument to that dispatch parameter automatically
-    dispatch(sendCartData(cart));
-  }, [cart, dispatch]); // dispatch(fetchCartData());->dispatch(cartActions.replaceCart(cartData));->"cart" change->dispatch(sendCartData(cart));
+    if (cart.changed) {
+      // "dispatch" function accept action creators that return functions, redux execute the returned function for you
+      // and will give "dispatch" function object as argument to that dispatch parameter automatically
+      dispatch(sendCartData(cart));
+    }
+  }, [cart, dispatch]); // dispatch(fetchCartData());->dispatch(cartActions.replaceCart(cartData));->"cart" change | dispatch(sendCartData(cart));
 
   return (
     <Fragment>
