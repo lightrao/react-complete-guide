@@ -5,7 +5,7 @@ import Cart from "./components/Cart/Cart";
 import Layout from "./components/Layout/Layout";
 import Products from "./components/Shop/Products";
 import Notification from "./components/UI/Notification";
-import { sendCartData } from "./store/cart-slice";
+import { sendCartData, fetchCartData } from "./store/cart-actions";
 
 let isInitial = true;
 
@@ -20,6 +20,10 @@ function App() {
   // the "App" component function will be re-executed and we will get to the latest state of "cart"
   const cart = useSelector((state) => state.cartSliceReducer);
 
+  useEffect(() => {
+    dispatch(fetchCartData());
+  }, [dispatch]);
+
   // execute when our app starts, It's a problem because this will send the initial (i.e. empty)
   // cart to our backend and overwrite any data stored there.
   useEffect(() => {
@@ -31,7 +35,7 @@ function App() {
     // "dispatch" function accept action creators that return functions, redux execute the returned function for you
     // and will give "dispatch" function object as argument to that dispatch parameter automatically
     dispatch(sendCartData(cart));
-  }, [cart, dispatch]);
+  }, [cart, dispatch]); // dispatch(fetchCartData());->dispatch(cartActions.replaceCart(cartData));->"cart" change->dispatch(sendCartData(cart));
 
   return (
     <Fragment>
