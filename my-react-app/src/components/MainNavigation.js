@@ -8,10 +8,10 @@ function MainNavigation(props) {
       <nav>
         <ul className={classes.list}>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/main/home">Home</Link>
           </li>
           <li>
-            <Link to="/products">Products</Link>
+            <Link to="/main/products">Products</Link>
           </li>
         </ul>
       </nav>
