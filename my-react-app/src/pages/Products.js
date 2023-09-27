@@ -5,7 +5,7 @@ const ProductsPage = (props) => {
     <>
       <h1>The Products Page</h1>
       <p>
-        Go to <Link to="/main/home">Home page</Link>.
+        Go to <Link to="/">Home page</Link>.
       </p>
     </>
   );
