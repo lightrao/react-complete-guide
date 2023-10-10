@@ -10,15 +10,7 @@ function EventsPage() {
   useEffect(() => {
     async function fetchEvents() {
       setIsLoading(true);
-      const response = await fetch("http://localhost:8080/events");
-
-      if (!response.ok) {
-        setError("Fetching events failed.");
-      } else {
-        const resData = await response.json();
-        console.log(resData.events);
-        setFetchedEvents(resData.events);
-      }
+      // fetch data part are moved to react route
       setIsLoading(false);
     }
 
