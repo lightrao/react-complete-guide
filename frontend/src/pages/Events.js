@@ -6,9 +6,9 @@ function EventsPage() {
   const data = useLoaderData();
   const events = data.events;
 
-  if (data.isError) {
-    return <p>{data.message}</p>;
-  }
+  // if (data.isError) {
+  //   return <p>{data.message}</p>;
+  // }
 
   return (
     <>
@@ -23,10 +23,11 @@ export const loader = async () => {
   // code define in the loader executes in the browser, not on some server
   // you can use any browser APIs
   // you can't use React Hooks
-  const response = await fetch("http://localhost:8080/events");
+  const response = await fetch("http://localhost:8080/eventss");
 
   if (!response.ok) {
-    return { isError: true, message: "Could not fetch events." };
+    // return { isError: true, message: "Could not fetch events!" };
+    throw new Error("Could not fetch events!");
   } else {
     return response;
   }
