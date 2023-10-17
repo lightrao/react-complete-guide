@@ -5,7 +5,7 @@ function EventsErrorPage(props) {
   // the shape of error object depends on what you throw
   const error = useRouteError();
 
-  let title = "An error from <EventsPage /> occured!";
+  let title = 'An error from path:"events" occured!';
   let message = "Somthing went wrong!";
 
   if (error.status === 500) {
@@ -13,7 +13,7 @@ function EventsErrorPage(props) {
   }
 
   if (error.status === 404) {
-    title = "Not found error from <EventsPage />!";
+    title = 'Not found error from path:"events"!';
     message = "Could not found resource or page.";
   }
 

@@ -23,7 +23,7 @@ export const loader = async () => {
   // code define in the loader executes in the browser, not on some server
   // you can use any browser APIs
   // you can't use React Hooks
-  const response = await fetch("http://localhost:8080/eventss");
+  const response = await fetch("http://localhost:8080/events");
 
   if (!response.ok) {
     // return { isError: true, message: "Could not fetch events!" };
