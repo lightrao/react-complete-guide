@@ -11,7 +11,7 @@ function EventForm({ method, event }) {
   return (
     // "Form" tag make sure that the browser default of sending a request to the backend will be omitted
     // but it will take that request that would've been sent and give it to your action.
-    <Form method="post" className={classes.form}>
+    <Form method="post" /* action="/any-other-path" */ className={classes.form}>
       <p>
         <label htmlFor="title">Title</label>
         <input
