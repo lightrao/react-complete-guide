@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"dddd","image":"https://images.app.goo.gl/3pZJrbLzMPwc6fPBA","date":"2023-10-19","description":"dddd","id":"2db711c4-0841-4490-a0fa-3c0f848ff991"},{"title":"dddd","image":"https://images.app.goo.gl/3pZJrbLzMPwc6fPBA","date":"2023-10-19","description":"dddd","id":"50315587-b400-450a-b526-3f97d2fc3865"},{"title":"ddd","image":"https://t7.baidu.com/it/u=737555197,308540855&fm=193&f=GIF","date":"2023-10-20","description":"dddd","id":"a88cc741-1e05-4a65-b21d-7792c351e1c7"},{"title":"ddd","image":"https://t7.baidu.com/it/u=737555197,308540855&fm=193&f=GIF","date":"2023-10-19","description":"ddddd","id":"34973b72-7a37-44f8-9ffa-0f76e1688138"},{"title":"dddd","image":"https://t7.baidu.com/it/u=737555197,308540855&fm=193&f=GIF","date":"2023-10-19","description":"dddd","id":"4393daf6-148b-4893-9cef-4dc3aa3d6868"},{"title":"ddd","image":"https://t7.baidu.com/it/u=737555197,308540855&fm=193&f=GIF","date":"2023-10-20","description":"dddd","id":"9887658b-a941-4701-a924-bc8bb79af439"},{"title":"dddd","image":"https://t7.baidu.com/it/u=737555197,308540855&fm=193&f=GIF","date":"2023-10-19","description":"dddd","id":"2474ef46-b6fa-4cf4-b876-c25884341c4c"},{"title":"dddd","image":"https://t7.baidu.com/it/u=737555197,308540855&fm=193&f=GIF","date":"2023-10-19","description":"dddd","id":"1512d4d0-f794-4ca2-abee-ea261eba61e1"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
