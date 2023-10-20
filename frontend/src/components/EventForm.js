@@ -1,8 +1,14 @@
-import { useNavigate, Form, useNavigation } from "react-router-dom";
+import {
+  useNavigate,
+  Form,
+  useNavigation,
+  useActionData,
+} from "react-router-dom";
 
 import classes from "./EventForm.module.css";
 
 function EventForm({ method, event }) {
+  const data = useActionData(); // access to the closest action
   const navigate = useNavigate();
   const navigation = useNavigation();
 
@@ -16,6 +22,14 @@ function EventForm({ method, event }) {
     // "Form" tag make sure that the browser default of sending a request to the backend will be omitted
     // but it will take that request that would've been sent and give it to your action.
     <Form method="post" /* action="/any-other-path" */ className={classes.form}>
+      {data && data.errors && (
+        <ul>
+          <li key={data.message}>{data.message}</li>
+          {Object.values(data.errors).map((err) => (
+            <li key={err}>{err}</li>
+          ))}
+        </ul>
+      )}
       <p>
         <label htmlFor="title">Title</label>
         <input
