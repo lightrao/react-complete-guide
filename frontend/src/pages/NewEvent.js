@@ -1,11 +1,8 @@
-import EventForm from "../components/EventForm";
+import EventForm from '../components/EventForm';
 
-function NewEventPage(props) {
-  // function submitHandler(event) {
-  //   event.preventDefault();
-  // }
-
+function NewEventPage() {
   return <EventForm method="post" />;
 }
 
 export default NewEventPage;
+

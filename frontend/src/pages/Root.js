@@ -1,14 +1,15 @@
-import { Outlet /* useNavigation */ } from "react-router-dom";
-import MainNavigaition from "../components/MainNavigation";
+import { Outlet, useNavigation } from 'react-router-dom';
 
-function RootLayout(props) {
+import MainNavigation from '../components/MainNavigation';
+
+function RootLayout() {
   // const navigation = useNavigation();
 
   return (
     <>
-      <MainNavigaition />
+      <MainNavigation />
       <main>
-        {/* {navigation.state === "loading" && <p>Loading...</p>} */}
+        {/* {navigation.state === 'loading' && <p>Loading...</p>} */}
         <Outlet />
       </main>
     </>

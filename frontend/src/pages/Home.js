@@ -1,9 +1,9 @@
-import PageContent from "../components/PageContent";
+import PageContent from '../components/PageContent';
 
-function HomePage(props) {
+function HomePage() {
   return (
-    <PageContent title="Welcome">
-      <p>Browser all our amazing components!</p>
+    <PageContent title="Welcome!">
+      <p>Browse all our amazing events!</p>
     </PageContent>
   );
 }
